@@ -608,7 +608,13 @@ function App() {
       <footer className="footer">
         <span>AgentConnect AI</span>
         <span>Semantic connections, meaningful conversations.</span>
-        <a href="/docs" target="_blank" rel="noreferrer">API docs ↗</a>
+        <a
+          href="https://agentconnect-ai.onrender.com/docs"
+          target="_blank"
+          rel="noreferrer"
+        >
+          API docs ↗
+        </a>
       </footer>
     </main>
   );

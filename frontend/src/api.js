@@ -1,4 +1,8 @@
-const API_ROOT = "/api/v1";
+const backendOrigin = (import.meta.env?.VITE_BACKEND_ORIGIN || "").replace(
+  /\/+$/,
+  "",
+);
+const API_ROOT = `${backendOrigin}/api/v1`;
 
 let csrfToken = null;
 

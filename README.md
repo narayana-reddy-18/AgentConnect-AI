@@ -44,6 +44,13 @@ The API is available at `http://localhost:8000`; interactive OpenAPI docs are at
 on the first post requiring matching and may download model files if they are
 not cached.
 
+For Render deployments using TiDB Cloud, set `DATABASE_URL` in the Render
+service environment to the `mysql+pymysql` URL for `agentconnect_db`; do not
+commit database credentials. TiDB Cloud hostnames ending in `.tidbcloud.com`
+use the bundled `backend/isrgrootx1.pem` CA with certificate and hostname
+verification enabled. Local MySQL URLs continue to connect without requiring
+TLS.
+
 Database schema changes are managed with Alembic. Before starting the backend,
 review and apply the migrations for the target database:
 
